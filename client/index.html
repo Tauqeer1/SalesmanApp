@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="salesmanApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Salesman App</title>
+
+    <link rel="stylesheet" href="vendors/angular-material/angular-material.css">
+    <link rel="stylesheet" href="vendors/angular-material-icons/angular-material-icons.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <script src="vendors/angular/angular.js"></script>
+    <script src="vendors/angular-route/angular-route.js"></script>
+    <script src="vendors/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="vendors/angular-material/angular-material.js"></script>
+    <script src="vendors/angular-messages/angular-messages.js"></script>
+    <script src="vendors/angular-aria/angular-aria.js"></script>
+    <script src="vendors/angular-animate/angular-animate.js"></script>
+    <script src="vendors/angular-material-icons/angular-material-icons.js"></script>
+
+    <script src="app.js"></script>
+    <script src="services/authService.js"></script>
+    <script src="services/universalService.js"></script>
+    <script src="config/config.js"></script>
+    <script src="controllers/mainController.js"></script>
+    <script src="controllers/headerBeforeLoginController.js"></script>
+    <script src="controllers/headerAfterLoginController.js"></script>
+    <script src="controllers/homeController.js"></script>
+    <script src="controllers/signupController.js"></script>
+    <script src="controllers/signinController.js"></script>
+    <script src="controllers/dashboardController.js"></script>
+    <script src="controllers/salesmanController.js"></script>
+    <script src="controllers/productController.js"></script>
+    <script src="controllers/orderController.js"></script>
+    <script src="controllers/addSalesmanController.js"></script>
+
+
+</head>
+<body layout="column">
+<div id="mainPage" ng-controller="mainController as mainCtrl">
+
+    <div ui-view="header"></div>    <!--Constant-->
+    <!--<div ui-view="sidebar"></div>-->
+    <div ui-view="main"></div>      <!--Change-->
+</div>
+
+</body>
+</html>

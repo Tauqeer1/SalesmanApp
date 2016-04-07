@@ -1,0 +1,32 @@
+<div layout="column">
+    <!-- <h1 layout="row" layout-align="center center">
+         {{salesmanCtrl.heading}}
+     </h1>-->
+
+    <md-content style="height: 350px" class="md-whiteframe-z1">
+        <section>
+            <md-subheader class="md-primary">
+                <span layout="column" layout-align="center center">All Salesman</span>
+            </md-subheader>
+            <md-list layout-padding>
+                <md-list-item class="md-3-line"  ng-repeat="message in salesmanCtrl.messages">
+
+                    <div class="md-list-item-text">
+                        <h3>{{message.what}}</h3>
+                        <h4>{{message.who}}</h4>
+
+                        <p>
+                            {{message.notes}}
+                        </p>
+                    </div>
+                </md-list-item>
+            </md-list>
+        </section>
+    </md-content>
+    <div layout="row" flex-offset-lg="80" flex-offset-sm="80" flex-offset-xs="80"  >
+        <md-button class=" md-primary md-fab" aria-label="Add Salesman" ng-click="salesmanCtrl.addSalesman($event)">
+            <ng-md-icon icon="add"></ng-md-icon>
+        </md-button>
+    </div>
+
+</div>

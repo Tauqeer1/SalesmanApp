@@ -1,0 +1,16 @@
+body{
+    margin: 0px;
+    padding: 0px;
+}
+
+
+
+
+.border {
+    border: 2px solid black;
+}
+#background-image {
+    background-image: url("../images/salesmanBanner.jpg");
+    height: 500px;
+    background-repeat: no-repeat;
+}

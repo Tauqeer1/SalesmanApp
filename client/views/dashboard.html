@@ -1,0 +1,20 @@
+<div layout="row">
+    <div>
+        <md-sidenav layout="column"
+                    md-component-id="left"
+                    style="height:100%"
+                    class="md-sidenav-left"
+                    md-is-locked-open="$mdMedia('lg')">
+            <md-toolbar class="md-tall">
+                <h1 class="md-headline" layout="column" layout-align="center center">Dashboard</h1>
+            </md-toolbar>
+
+            <md-button class="md-raised md-primary" ng-click="dashboardCtrl.salesman('dashboard.salesman')">Salesman</md-button>
+            <md-button class="md-raised md-primary" ng-click="dashboardCtrl.product('dashboard.product')">Product</md-button>
+            <md-button class="md-raised md-primary" ng-click="dashboardCtrl.order('dashboard.order')">Orders</md-button>
+        </md-sidenav>
+    </div>
+    <div flex ui-view>
+
+    </div>
+</div>
