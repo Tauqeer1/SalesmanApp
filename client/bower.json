@@ -21,6 +21,7 @@
     "angular-material": "^1.0.6",
     "angular-route": "^1.5.2",
     "angular-ui-router": "ui-router#^0.2.18",
-    "angular-material-icons": "^0.7.0"
+    "angular-material-icons": "^0.7.0",
+    "material-design-icons": "^2.2.3"
   }
 }

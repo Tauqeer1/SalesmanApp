@@ -1,5 +1,5 @@
 angular.module('salesmanApp')
-    .controller('signupController', ['$http', '$location', 'universalService', '$state', function ($http, $location, universalService, $state) {
+    .controller('signupController', ['$http', '$mdToast', 'universalService', '$state', function ($http, $mdToast, universalService, $state) {
         var _self = this;
         _self.signUpData = {
             /*companyName: 'myCompany',
@@ -23,15 +23,18 @@ angular.module('salesmanApp')
             console.log(_self.signUpData);
             $http.post('/signup', _self.signUpData)
                 .success(function (data) {
-                    console.log("Data Arrived ", data);
-                    console.log("Data id  ", data.successData._id);
-                    //universalService.companyId = data.success._id;
-                    //$location.path('/signin');
-                    $state.go('signin');
+                    if (data.status) {
+                        $mdToast.show($mdToast.simple().textContent(data.message).position('right').hideDelay(3000));
+                        console.log("Data Arrived ", data);
+                        console.log("Data id  ", data.successData._id);
+                        $state.go('signin');
+                    }
+                    else {
+                        $mdToast.show($mdToast.simple().textContent(data.message).position('right').hideDelay(3000));
+                    }
                 })
                 .error(function (err) {
                     console.log("Error ", err);
                 })
         }
-
     }]);
